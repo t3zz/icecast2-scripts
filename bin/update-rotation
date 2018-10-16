@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "deleting old rotation"
+sudo rm /tmp/radio_* -rf
+echo "adding songs to playlist"
+find /songs/preferred/ -name '*mp3' -type f | shuf | tail -n 20 > /tmp/radio_pre-shuffle.txt
+find /songs/twitter/ -name '*mp3' -type f | shuf | tail -n 20 >> /tmp/radio_pre-shuffle.txt
+echo "add playlist, but shuffle those first, chief"
+shuf /tmp/radio_pre-shuffle.txt > /tmp/radio_shuffle.txt
+shuf /tmp/radio_shuffle.txt > /tmp/radio_current-rotation.txt
+echo "shuffled 5x"
+reread
+echo "re-read playlist file"

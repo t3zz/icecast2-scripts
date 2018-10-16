@@ -1,0 +1,9 @@
+#!/bin/bash
+
+update-rotation
+echo "running server!"
+ezstream -c ../configs/mtm-radio.xml
+
+# find /songs/ -name '*.mp3' > /tmp/sorted.txt && \
+# ezstream -s /tmp/sorted.txt > /tmp/station1.txt && \
+echo "exiting server!"

@@ -1,0 +1,6 @@
+#!/bin/bash
+ffmpeg -loop 1 -i /songs/logo.jpg -i http://localhost:8000/stream -r 5 \
+-acodec mp3 -strict -2 -c:v libx264 -strict experimental -b:a 128k \
+-pix_fmt yuvj444p -b:v 192k -minrate 128k -maxrate 256k \
+-bufsize 512k -f flv rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY
+

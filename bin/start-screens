@@ -1,0 +1,3 @@
+# Currently this is broken, icecast2 requires future patch
+screen -d -m -t mtm-radio bash stream-mtm
+screen -d -m -t atbm-radio bash stream-atbm

@@ -1,0 +1,4 @@
+#!/bin/bash
+# re-read rotation playlist
+sudo killall -SIGHUP ezstream
+

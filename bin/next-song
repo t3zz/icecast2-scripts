@@ -1,0 +1,3 @@
+# kill ezstream process, will restart stream
+# w/o kicking current listeners :)
+sudo killall -SIGUSR1 ezstream

@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "deleting old rotation"
+echo "adding mixes to playlist"
+find /mixes/ -name '*mp3' -type f | tail -n 3 >> /tmp/radio_mixes.txt
+echo "re-read playlist file"
+reread
